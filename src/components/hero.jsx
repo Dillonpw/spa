@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 export default function Hero() {
   return (
-    <section className="flex items-center justify-center py-40">
+    <section className="flex items-center justify-center pt-40 pb-24">
       <style>{`
         .hero-gradient {
           background: radial-gradient(circle at center, rgba(138, 43, 226, 0.2) 0%, rgba(15, 10, 30, 0) 70%);
@@ -25,7 +25,7 @@ export default function Hero() {
           Explore the Future of Technology
         </motion.h1>
         <motion.p
-          className="mx-auto mb-8 max-w-2xl text-xl text-gray-300"
+          className="mx-auto mb-16 max-w-2xl text-xl text-gray-300"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}

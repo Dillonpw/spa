@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
 
 export default function Footer() {
-    return (
-
-      <footer className="bg-[#0F0A1E] py-8 text-[#E6E6FA]">
+  return (
+    <footer className="bg-background py-8">
       <div className="container mx-auto text-center">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -22,4 +21,5 @@ export default function Footer() {
         </motion.p>
       </div>
     </footer>
-    )}
+  );
+}

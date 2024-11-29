@@ -4,19 +4,19 @@ export default function Features() {
   const products = [
     {
       name: "AI-Powered Analytics",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "public/markus-spiske-iar-afB0QQw-unsplash.jpg",
     },
     {
       name: "Quantum Computing Solutions",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "public/markus-spiske-Skf7HxARcoc-unsplash.jpg",
     },
     {
       name: "Blockchain Security",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "public/mathew-schwartz-iGheu30xAi8-unsplash.jpg",
     },
     {
       name: "Edge Computing",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "public/thisisengineering-ZPeXrWxOjRQ-unsplash.jpg",
     },
   ];
 
@@ -48,7 +48,7 @@ export default function Features() {
               <motion.img
                 src={product.image}
                 alt={product.name}
-                className="h-[250px] w-full rounded-lg object-cover transition-transform duration-300 group-hover:scale-110"
+                className="h-[250px] w-full rounded-lg object-cover transition-transform duration-100 group-hover:scale-110"
               />
               <div className="mt-4 text-center">
                 <h3 className="text-xl font-semibold ">

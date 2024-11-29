@@ -24,7 +24,7 @@ export default function Header() {
               whileHover="hovered"
             >
               <motion.div
-                className="h-6 w-6 text-[#8A2BE2]"
+                className="h-6 w-6 text-secondary"
                 variants={{
                   hovered: { y: -50, x: 30, rotate: 25, opacity: 0 },
                   initial: { y: 0, x: 0, rotate: 0, opacity: 1 },

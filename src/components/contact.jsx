@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 
 export default function Contact() {
   return (
-    <section id="contact" className="bg-[#1A1A2E] text-text py-16">
+    <section id="contact" className="bg-background text-text py-16">
       <div className="container mx-auto max-w-md">
         <motion.h2
           className="mb-8 text-center text-3xl font-bold"
@@ -31,7 +31,7 @@ export default function Contact() {
           <input
             type="email"
             placeholder="Your email"
-            className="flex-grow border-[#8A2BE2] bg-[#2D2D44] text-[#E6E6FA]"
+            className="border-secondary pl-2 bg-nav flex-grow rounded-md border"
           />
           <Button type="submit" className="bg-button hover:scale-110">
             <Send className="mr-2 h-4 w-4" />

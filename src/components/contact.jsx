@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
 import { Send } from "lucide-react";
+import { Button } from "./ui/button";
 
 export default function Contact() {
   return (
-    <section id="contact" className="bg-[#1A1A2E] py-16">
+    <section id="contact" className="bg-[#1A1A2E] text-text py-16">
       <div className="container mx-auto max-w-md">
         <motion.h2
           className="mb-8 text-center text-3xl font-bold"
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           Stay Connected
@@ -32,10 +33,10 @@ export default function Contact() {
             placeholder="Your email"
             className="flex-grow border-[#8A2BE2] bg-[#2D2D44] text-[#E6E6FA]"
           />
-          <button type="submit" className="bg-[#8A2BE2] hover:bg-[#9B30FF]">
+          <Button type="submit" className="bg-button hover:scale-110">
             <Send className="mr-2 h-4 w-4" />
             Subscribe
-          </button>
+          </Button>
         </motion.form>
       </div>
     </section>

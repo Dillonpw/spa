@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
+import { Button } from "./ui/button";
 
 export default function Hero() {
   return (
-    <section className="flex justify-center items-center py-40">
+    <section className="flex items-center justify-center py-40">
       <style>{`
         .hero-gradient {
           background: radial-gradient(circle at center, rgba(138, 43, 226, 0.2) 0%, rgba(15, 10, 30, 0) 70%);
@@ -24,7 +25,7 @@ export default function Hero() {
           Explore the Future of Technology
         </motion.h1>
         <motion.p
-          className="mx-auto mb-8 max-w-2xl text-xl"
+          className="mx-auto mb-8 max-w-2xl text-xl text-gray-300"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
@@ -36,10 +37,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
+          className="relative z-20 inline-block"
         >
-          <button className="bg-[#8A2BE2] text-white hover:bg-[#9B30FF]">
-            Dive into Innovation
-          </button>
+          <Button>Get Started</Button>
         </motion.div>
       </motion.div>
       {[...Array(14)].map((_, index) => (
@@ -64,7 +64,7 @@ export default function Hero() {
             repeatType: "reverse",
           }}
         >
-          <div className="h-full w-full rounded-full bg-[#8A2BE2] opacity-30"></div>
+          <div className="bg-secondary h-full w-full rounded-full opacity-30"></div>
         </motion.div>
       ))}
     </section>

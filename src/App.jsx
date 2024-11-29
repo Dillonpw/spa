@@ -9,7 +9,7 @@ import Footer from "./components/footer";
 
 export default function Page() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#0F0A1E] text-[#E6E6FA]">
+    <main className="bg-background text-text min-h-screen overflow-x-hidden">
       <Header />
       <Hero />
       <Features />

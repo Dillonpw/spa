@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #0f0a1e;
+    --button: #7056cd;
+    --text: #f5f5f5;
+    --primary: #33025c;
+    --secondary: #8a2be2;
+    --nav: #1a1a2ecc; /* 'cc' is 80% opacity in hex */
+  }
+}

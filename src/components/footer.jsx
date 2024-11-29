@@ -10,7 +10,7 @@ export default function Footer() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          &copy; 2023 TechSpace. All rights reserved.
+          &copy; 2024 Company Name. All rights reserved.
         </motion.p>
         <motion.p
           className="mt-2"

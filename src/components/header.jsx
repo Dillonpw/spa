@@ -6,28 +6,52 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed z-[60] w-full bg-[#1A1A2E]/80 p-4 text-[#E6E6FA] backdrop-blur-md">
+    <header className="fixed z-[60] w-full bg-nav p-4">
       <div className="container mx-auto flex items-center justify-between">
         <motion.div
-          className="flex items-center space-x-2"
-          initial={{ opacity: 0, x: -20 }}
+          initial={{ opacity: 0, x: -120 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.75 }}
+          className="flex gap-2"
         >
-          <Rocket className="h-6 w-6 text-[#8A2BE2]" />
-          <span className="text-xl font-bold">TechSpace</span>
+          <motion.div
+            className="flex items-center space-x-2"
+            transition={{ duration: 0.5 }}
+            whileHover={{ scale: 1.1 }}
+          >
+            <motion.div
+              className="group flex items-center space-x-2"
+              whileHover="hovered"
+            >
+              <motion.div
+                className="h-6 w-6 text-[#8A2BE2]"
+                variants={{
+                  hovered: { y: -50, x: 30, rotate: 25, opacity: 0 },
+                  initial: { y: 0, x: 0, rotate: 0, opacity: 1 },
+                }}
+                transition={{ duration: 0.5 }}
+              >
+                <Rocket />
+              </motion.div>
+              <span className="text-xl font-bold">TechSpace</span>
+            </motion.div>
+          </motion.div>
         </motion.div>
+
         <nav className="hidden md:block">
           <ul className="flex space-x-4">
-            {["Products", "About", "Contact"].map((item) => (
+            {["Products", "About", "Contact"].map((item, index) => (
               <motion.li
                 key={item}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.75, delay: index * 0.2 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <a
                   href={`#${item.toLowerCase()}`}
-                  className="hover:text-[#8A2BE2]"
+                  className="hover:text-secondary"
                 >
                   {item}
                 </a>
@@ -48,14 +72,13 @@ export default function Header() {
                 <ul className="space-y-4">
                   {["Products", "About", "Contact"].map((item) => (
                     <motion.li
-                      className="hover:underline"
                       key={item}
-                      whileHover={{ scale: 1.05 }}
+                      whileHover={{ scale: 1.05, y: -4 }}
                       whileTap={{ scale: 0.95 }}
                     >
                       <a
                         href={`#${item.toLowerCase()}`}
-                        className="block py-2 text-2xl text-[#E6E6FA]"
+                        className="block py-2 text-2xl text-[#E6E6FA] hover:text-[#8A2BE2]"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {item}
@@ -71,6 +94,9 @@ export default function Header() {
       <motion.button
         className="fixed right-4 top-4 z-[70] md:hidden"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
+        initial={{ opacity: 0, x: 30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95, rotate: 180 }}
       >

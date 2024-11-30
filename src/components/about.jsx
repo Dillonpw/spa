@@ -44,7 +44,7 @@ export default function About() {
           ].map(({ icon: Icon, title, description }, index) => (
             <motion.div
               key={title}
-              className="flex flex-col items-center rounded-lg bg-nav p-6 text-center shadow-lg"
+              className="bg-nav flex flex-col items-center rounded-lg p-6 text-center shadow-lg"
               custom={index}
               initial="hidden"
               animate={controls}
@@ -60,13 +60,14 @@ export default function About() {
                 }),
               }}
             >
-              <Icon className="mb-4 h-12 w-12 text-secondary" />
+              <Icon className="text-secondary mb-4 h-12 w-12" />
               <h3 className="mb-2 text-xl font-semibold">{title}</h3>
               <p>{description}</p>
             </motion.div>
           ))}
         </div>
       </div>
+
     </section>
   );
 }

@@ -37,17 +37,21 @@ export default function Features() {
             <motion.div
               key={product.name}
               className="bg-background group relative cursor-pointer overflow-hidden rounded-lg p-4 shadow-lg"
+              initial={{ opacity: 0, y: 40, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 1,
+                delay: index * 0.2,
+                type: "spring",
+                stiffness: 100,
+                damping: 10,
+              }}
             >
               <motion.img
                 src={product.image}
                 alt={product.name}
                 whileHover={{ scale: 1.06 }}
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 1.5,
-                  delay: index * 0.4,
-                }}
                 className="h-[250px] w-full rounded-lg object-cover"
               />
               <div className="mt-4 text-center">

@@ -6,7 +6,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed z-[60] w-full bg-nav p-4">
+    <header className="bg-nav fixed z-[60] w-full p-4">
       <div className="container mx-auto flex items-center justify-between">
         <motion.div
           initial={{ opacity: 0, x: -120 }}
@@ -24,7 +24,7 @@ export default function Header() {
               whileHover="hovered"
             >
               <motion.div
-                className="h-6 w-6 text-secondary"
+                className="text-secondary h-6 w-6"
                 variants={{
                   hovered: { y: -50, x: 30, rotate: 25, opacity: 0 },
                   initial: { y: 0, x: 0, rotate: 0, opacity: 1 },

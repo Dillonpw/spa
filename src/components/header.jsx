@@ -127,6 +127,7 @@ export default function Header() {
           transition={{ duration: 0.5 }}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95, rotate: 180 }}
+          aria-label="Toggle menu"
         >
           {isMenuOpen ? (
             <X className="h-6 w-6" />

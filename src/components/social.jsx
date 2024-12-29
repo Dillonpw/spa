@@ -24,6 +24,7 @@ export default function Social() {
         {socialLinks.map((link, index) => (
           <motion.a
             key={link.key}
+            aria-label={link.key}
             href={link.href}
             target="_blank"
             rel="noreferrer"

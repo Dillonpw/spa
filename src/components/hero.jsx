@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
+import Social from "./social";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col items-center justify-center pb-24 py-40">
+    <section className="flex h-[100vh] flex-col items-center justify-center py-40 pb-24">
       <style>{`
         .hero-gradient {
           background: radial-gradient(circle at center, rgba(138, 43, 226, 0.2) 0%, rgba(15, 10, 30, 0) 70%);
@@ -41,6 +42,7 @@ export default function Hero() {
         >
           <Button>Get Started</Button>
         </motion.div>
+        <Social />
       </motion.div>
       {[...Array(14)].map((_, index) => (
         <motion.div
@@ -64,7 +66,7 @@ export default function Hero() {
             repeatType: "reverse",
           }}
         >
-          <div className="bg-secondary h-full w-full rounded-full opacity-30"></div>
+          <div className="h-full w-full rounded-full bg-secondary opacity-30"></div>
         </motion.div>
       ))}
     </section>

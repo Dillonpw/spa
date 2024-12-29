@@ -19,7 +19,6 @@ export default function Header() {
             <motion.div
               className="flex items-center space-x-2"
               transition={{ duration: 0.5 }}
-              whileHover={{ scale: 1.1 }}
             >
               <motion.div
                 className="group flex items-center space-x-2"
@@ -40,16 +39,15 @@ export default function Header() {
             </motion.div>
           </motion.div>
 
-          <nav className="hidden md:flex items-center space-x-4">
-            <ul className="flex space-x-4 items-center">
+          <nav className="hidden items-center space-x-4 md:flex">
+            <ul className="flex items-center space-x-4">
               {["Products", "About", "Contact"].map((item, index) => (
                 <motion.li
                   key={item}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.75, delay: index * 0.2 }}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.25, delay: index * 0.2 }}
+                  whileHover={{ scale: 1.2 }}
                 >
                   <a
                     href={`#${item.toLowerCase()}`}
@@ -94,7 +92,7 @@ export default function Header() {
                       whileHover={{ scale: 1.05, y: -4 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      <Button 
+                      <Button
                         className="w-full text-2xl"
                         onClick={() => setIsMenuOpen(false)}
                       >
@@ -112,7 +110,7 @@ export default function Header() {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: .5 }}
+          transition={{ duration: 0.5 }}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95, rotate: 180 }}
         >

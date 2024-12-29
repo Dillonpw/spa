@@ -2,7 +2,6 @@
 
 import Header from "./components/header";
 import Hero from "./components/hero";
-import Social from "./components/social";
 import Features from "./components/features";
 import About from "./components/about";
 import Contact from "./components/contact";
@@ -10,10 +9,9 @@ import Footer from "./components/footer";
 
 export default function Page() {
   return (
-    <main className="bg-background text-text min-h-screen overflow-x-hidden">
+    <main className="min-h-screen space-y-16 overflow-x-hidden bg-background text-text">
       <Header />
       <Hero />
-      <Social />
       <Features />
       <About />
       <Contact />

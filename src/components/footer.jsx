@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <footer className="bg-background pb-8 pt-40">
+    <footer className="bg-background pb-8 pt-10">
       <div className="container mx-auto text-center">
         <motion.p
           initial={{ opacity: 0, y: 20 }}

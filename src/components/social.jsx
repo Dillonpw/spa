@@ -10,7 +10,7 @@ export default function Social() {
   ];
 
   return (
-    <div className="relative z-50 flex flex-col items-center justify-center">
+    <div className="relative z-50 flex flex-col items-center justify-center py-20">
       <motion.p
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}

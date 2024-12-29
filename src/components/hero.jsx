@@ -18,7 +18,7 @@ export default function Hero() {
         className="relative z-10 text-center"
       >
         <motion.h1
-          className="mb-6 text-5xl font-bold"
+          className="mb-6 text-4xl font-bold"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
@@ -40,7 +40,7 @@ export default function Hero() {
           transition={{ delay: 0.6, duration: 0.5 }}
           className="relative z-20 inline-block"
         >
-          <Button>Get Started</Button>
+          <Button size="xl">Get Started</Button>
         </motion.div>
         <Social />
       </motion.div>

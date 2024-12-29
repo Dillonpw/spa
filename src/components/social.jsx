@@ -10,12 +10,12 @@ export default function Social() {
   ];
 
   return (
-    <div className="relative z-50 flex flex-col items-center justify-center py-20">
+    <div className="relative z-50 flex flex-col items-center justify-center pt-40">
       <motion.p
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 0.8 }}
-        className="text-3xl font-semibold"
+        className="text-2xl font-semibold"
       >
         Follow Us
       </motion.p>

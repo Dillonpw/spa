@@ -25,7 +25,7 @@ export default function Features() {
       <section className="bg-nav py-40">
         <div className="container mx-auto">
           <motion.h2
-            className="mb-8 text-center text-3xl font-bold"
+            className="mb-28 text-center text-3xl font-semibold"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -33,7 +33,7 @@ export default function Features() {
           >
             How We Innovate
           </motion.h2>
-          <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2">
+          <div className="grid gap-14 sm:grid-cols-1 md:grid-cols-2">
             {products.map((product, index) => (
               <motion.div
                 key={product.name}
@@ -51,7 +51,6 @@ export default function Features() {
               >
                 <div className="relative w-full pb-[56.25%]">
                   {" "}
-                  {/* 16:9 Aspect Ratio Container */}
                   <motion.img
                     src={product.image}
                     alt={product.name}

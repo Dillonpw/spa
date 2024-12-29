@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        geist: ['Geist', 'sans-serif'],
+      },
       colors:{
         button: 'var(--button)',
         background: 'var(--background)',

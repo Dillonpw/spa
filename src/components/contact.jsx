@@ -24,16 +24,8 @@ export default function Contact() {
   return (
     <section id="contact" className="bg-nav py-40 text-text">
       <div className="container mx-auto max-w-md">
-        <motion.h2
-          className="mb-8 text-center text-3xl font-bold"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          Stay Connected
-        </motion.h2>
         <motion.p
-          className="mb-6 text-center"
+          className="mb-12 text-center text-xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}

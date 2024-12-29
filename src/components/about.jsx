@@ -7,7 +7,7 @@ export default function About() {
       <section id="about" className="py-40">
         <div className="container mx-auto">
           <motion.h2
-            className="mb-8 text-center text-3xl font-bold"
+            className="mb-28 text-center text-3xl font-semibold"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

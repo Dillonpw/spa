@@ -1,10 +1,24 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Rocket } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768 && isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [isMenuOpen]);
 
   return (
     <>
@@ -41,12 +55,12 @@ export default function Header() {
 
           <nav className="hidden items-center space-x-4 md:flex">
             <ul className="flex items-center space-x-4">
-              {["Products", "About", "Contact"].map((item, index) => (
+              {["Products", "About", "Contact"].map((item) => (
                 <motion.li
                   key={item}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.25, delay: index * 0.2 }}
+                  transition={{ duration: 0.25 }}
                   whileHover={{ scale: 1.2 }}
                 >
                   <a
@@ -58,7 +72,7 @@ export default function Header() {
                 </motion.li>
               ))}
               <li>
-                <Button>Sign Up</Button>
+                <Button size="md">Sign Up</Button>
               </li>
             </ul>
           </nav>
@@ -106,7 +120,7 @@ export default function Header() {
           </AnimatePresence>
         </div>
         <motion.button
-          className="fixed right-4 top-4 z-[70] md:hidden"
+          className={`fixed right-4 top-4 z-[70] ${isMenuOpen ? "" : "md:hidden"}`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}

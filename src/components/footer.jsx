@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 
 export default function Footer() {
+  const date = new Date();
+
   return (
     <footer className="bg-background pb-8 pt-10">
       <div className="container mx-auto text-center">
@@ -9,7 +11,7 @@ export default function Footer() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          &copy; 2024 Company Name. All rights reserved.
+          &copy; {date.getFullYear()} Company Name. All rights reserved.
         </motion.p>
         <motion.p
           className="mt-2"

@@ -60,7 +60,7 @@ export default function Header() {
                   key={item}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.25 }}
+                  transition={{ duration: 0.25, delay: 0.2 }}
                   whileHover={{ scale: 1.2 }}
                 >
                   <a

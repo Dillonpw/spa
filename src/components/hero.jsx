@@ -40,7 +40,9 @@ export default function Hero() {
           transition={{ delay: 0.6, duration: 0.5 }}
           className="relative z-20 inline-block"
         >
-          <Button size="xl">Get Started</Button>
+          <Button size="xl">
+            <a href="#">Get Started</a>
+          </Button>
         </motion.div>
         <Social />
       </motion.div>
